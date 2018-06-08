@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:CubeProFanLedCtrlBoard-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -489,17 +490,17 @@ Text GLabel 4550 1350 1    50   Input ~ 0
 WS2812Led
 Text Notes 4150 1700 0    50   ~ 0
 D11 6 5 4
-Text Notes 6200 2550 0    50   ~ 0
+Text Notes 5700 2550 0    50   ~ 0
 A4
-Text Notes 5900 2550 0    50   ~ 0
+Text Notes 6100 2550 0    50   ~ 0
 A3
 Text Notes 4050 2050 0    50   ~ 0
 5V
 Text Notes 4000 2400 0    50   ~ 0
 GND
-Text GLabel 6050 2100 3    50   Input ~ 0
+Text GLabel 5850 2100 3    50   Input ~ 0
 HotEndFan
-Text GLabel 6150 2100 3    50   Input ~ 0
+Text GLabel 6050 2100 3    50   Input ~ 0
 HotBedFan
 Text GLabel 4450 1350 1    50   Input ~ 0
 CaseFan
