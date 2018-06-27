@@ -1,4 +1,4 @@
-(kicad_pcb (version 20171130) (host pcbnew 5.0.0-rc2-unknown-d4393b2~65~ubuntu16.04.1)
+(kicad_pcb (version 20171130) (host pcbnew 5.0.0-rc2-unknown-f634b75~65~ubuntu16.04.1)
 
   (general
     (thickness 1.6)
@@ -86,7 +86,7 @@
       (mirror false)
       (drillshape 0)
       (scaleselection 1)
-      (outputdirectory gerber/))
+      (outputdirectory "gerber/"))
   )
 
   (net 0 "")
@@ -182,7 +182,7 @@
     (descr "Through hole straight socket strip, 1x02, 2.54mm pitch, single row (from Kicad 4.0.7), script generated")
     (tags "Through hole socket strip THT 1x02 2.54mm single row")
     (path /5B1157A1)
-    (fp_text reference J1 (at 0 -2.77 90) (layer F.SilkS)
+    (fp_text reference J1 (at 2.54 2.54 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value Conn_01x02 (at 0 5.31 90) (layer F.Fab)
@@ -300,7 +300,7 @@
     (descr "Through hole straight socket strip, 1x02, 2.54mm pitch, single row (from Kicad 4.0.7), script generated")
     (tags "Through hole socket strip THT 1x02 2.54mm single row")
     (path /5B116135)
-    (fp_text reference J3 (at 0 -2.77 90) (layer F.SilkS)
+    (fp_text reference J3 (at 2.54 2.54 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value Conn_01x02 (at 0 5.31 90) (layer F.Fab)
@@ -420,7 +420,7 @@
     (descr "Through hole straight socket strip, 1x02, 2.54mm pitch, single row (from Kicad 4.0.7), script generated")
     (tags "Through hole socket strip THT 1x02 2.54mm single row")
     (path /5B116560)
-    (fp_text reference J5 (at 0 -2.77 90) (layer F.SilkS)
+    (fp_text reference J5 (at 2.54 2.54 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value Conn_01x02 (at 0 5.31 90) (layer F.Fab)
@@ -460,7 +460,7 @@
     (descr "Through hole straight socket strip, 1x02, 2.54mm pitch, single row (from Kicad 4.0.7), script generated")
     (tags "Through hole socket strip THT 1x02 2.54mm single row")
     (path /5B1165F9)
-    (fp_text reference J6 (at 0 -2.77 90) (layer F.SilkS)
+    (fp_text reference J6 (at 2.54 0 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value Conn_01x02 (at 0 5.31 90) (layer F.Fab)
@@ -759,7 +759,7 @@
     (model ${KISYS3DMOD}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x04_P2.54mm_Vertical.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz 0 180 0))
     )
   )
 
@@ -802,7 +802,7 @@
     (model ${KISYS3DMOD}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x04_P2.54mm_Vertical.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz 0 180 0))
     )
   )
 
@@ -842,7 +842,7 @@
     (model ${KISYS3DMOD}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x04_P2.54mm_Vertical.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz 0 180 0))
     )
   )
 
@@ -888,9 +888,9 @@
     (pad 8 thru_hole oval (at -2.54 7.62 180) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask)
       (net 15 HotEndFan))
     (model ${KISYS3DMOD}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_2x04_P2.54mm_Vertical.wrl
-      (at (xyz 0 0 0))
+      (offset (xyz -2.54 0 0))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz 0 180 0))
     )
   )
 
@@ -1211,7 +1211,7 @@
     (arrow2b (pts (xy 163.83 49.53) (xy 162.703496 50.116421)))
   )
   (dimension 7.62 (width 0.3) (layer Eco1.User) (tstamp 5B269A11)
-    (gr_text "7,620 mm" (at 63.94 77.47 90) (layer Eco1.User) (tstamp 5B269A12)
+    (gr_text "7,620 mm" (at 63.94 77.47 90) (layer Eco1.User) (tstamp 5B269A11)
       (effects (font (size 1.5 1.5) (thickness 0.3)))
     )
     (feature1 (pts (xy 71.12 73.66) (xy 65.453579 73.66)))
