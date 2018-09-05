@@ -1,0 +1,7 @@
+D58 Hotend Fan
+D57 Bed Fan - control via gcode only
+D4  Neopixel LED
+D5  Case/Stepper Fan
+D6  Case LED
+D11
+
