@@ -77,7 +77,7 @@
 #define STRING_CONFIG_H_AUTHOR "AcidBurns - Schubert" // Who made the changes.
 #define SHOW_BOOTSCREEN
 #define STRING_SPLASH_LINE1 "M-Acid 1.1.9" // will be shown during bootup in line 1
-#define STRING_SPLASH_LINE2 "201800829-Acid" // will be shown during bootup in line 2
+#define STRING_SPLASH_LINE2 "20181031-Acid" // will be shown during bootup in line 2
 
 /**
  * *** VENDORS PLEASE READ ***
@@ -385,9 +385,9 @@
 
   // CubePro Duo M303 E0 C5 S245 20180829
   // LINKER EXTRUDER
-  #define DEFAULT_Kp 18.41
-  #define DEFAULT_Ki 3.21
-  #define DEFAULT_Kd 26.39
+  #define DEFAULT_Kp 15.0
+  #define DEFAULT_Ki 1.0
+  #define DEFAULT_Kd 2.25
   
   // Ultimaker
   //#define DEFAULT_Kp 22.2
@@ -452,9 +452,9 @@
   //#define DEFAULT_bedKi 45.29
   //#define DEFAULT_bedKd 486.27
   // FANS ON:
-  #define DEFAULT_bedKp 214.83
-  #define DEFAULT_bedKi 29.46
-  #define DEFAULT_bedKd 391.57
+  #define DEFAULT_bedKp 200.0
+  #define DEFAULT_bedKi 0.4
+  #define DEFAULT_bedKd 360.0
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from pidautotune
@@ -599,7 +599,8 @@
  * (This feature is not required for common micro-switches mounted on PCBs
  * based on the Makerbot design, since they already include the 100nF capacitor.)
  */
-//#define ENDSTOP_NOISE_FILTER
+#define ENDSTOP_NOISE_FILTER
+#define HOMING_BUMP_DIVISOR { 2, 2, 4 }
 
 //=============================================================================
 //============================== Movement Settings ============================
@@ -676,7 +677,7 @@
  *
  * See https://github.com/synthetos/TinyG/wiki/Jerk-Controlled-Motion-Explained
  */
-//#define S_CURVE_ACCELERATION
+#define S_CURVE_ACCELERATION
 
 //===========================================================================
 //============================= Z Probe Options =============================
@@ -802,7 +803,7 @@
 #define MIN_PROBE_EDGE 0
 
 // X and Y axis travel speed (mm/m) between probes
-#define XY_PROBE_SPEED 8000
+#define XY_PROBE_SPEED 5000
 
 // Feedrate (mm/m) for the first approach when double-probing (MULTIPLE_PROBING == 2)
 #define Z_PROBE_SPEED_FAST HOMING_FEEDRATE_Z
@@ -897,8 +898,8 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 250
-#define Y_BED_SIZE 290
+#define X_BED_SIZE 290
+#define Y_BED_SIZE 250
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
@@ -1107,12 +1108,12 @@
  * Override if the automatically selected points are inadequate.
  */
 #if ENABLED(AUTO_BED_LEVELING_3POINT) || ENABLED(AUTO_BED_LEVELING_UBL)
-  #define PROBE_PT_1_X 5       // Probing points for 3-Point leveling of the mesh
-  #define PROBE_PT_1_Y 35
-  #define PROBE_PT_2_X 250
-  #define PROBE_PT_2_Y 35
-  #define PROBE_PT_3_X 150
-  #define PROBE_PT_3_Y 260
+  #define PROBE_PT_1_X 35       // Probing points for 3-Point leveling of the mesh
+  #define PROBE_PT_1_Y 5
+  #define PROBE_PT_2_X 35
+  #define PROBE_PT_2_Y 250
+  #define PROBE_PT_3_X 260
+  #define PROBE_PT_3_Y 150
 #endif
 
 /**
@@ -1164,13 +1165,13 @@
 //#define Z_SAFE_HOMING
 
 #if ENABLED(Z_SAFE_HOMING)
-  #define Z_SAFE_HOMING_X_POINT ((X_BED_SIZE) / 2)    // X point for Z homing when homing all axes (G28).
-  #define Z_SAFE_HOMING_Y_POINT ((Y_BED_SIZE) / 2)    // Y point for Z homing when homing all axes (G28).
+  #define Z_SAFE_HOMING_X_POINT ((X_BED_SIZE) / 4)    // X point for Z homing when homing all axes (G28).
+  #define Z_SAFE_HOMING_Y_POINT ((Y_BED_SIZE) / 4)    // Y point for Z homing when homing all axes (G28).
 #endif
 
 // Homing speeds (mm/m)
-#define HOMING_FEEDRATE_XY (75*60)
-#define HOMING_FEEDRATE_Z  (20*60)
+#define HOMING_FEEDRATE_XY (60*60)
+#define HOMING_FEEDRATE_Z  (15*60)
 
 // @section calibrate
 
